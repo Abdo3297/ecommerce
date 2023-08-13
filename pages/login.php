@@ -26,14 +26,12 @@
             session_start();
             $_SESSION["user"]= $response;
             if($response["role"] == 'user'){
-                header('Location:user.php');
+                header('Location:http://localhost/ecommerce/pages/user/index.php');
                 die;
             }else{
-                header('Location:admin.php');
+                header('Location:http://localhost/ecommerce/pages/admin/index.php');
                 die;
             }
-        }else{
-            $errors['passErr'] = "password is required";
         }
     }
 ?>
