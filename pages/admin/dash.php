@@ -31,7 +31,7 @@ if (!(isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {
             </div>
         </main>
     </div>
-    <script src="./assets/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
