@@ -2,10 +2,6 @@
 // array of errors
 $errors = array();
 ######################################################
-// connection
-require_once('connection.php');
-
-######################################################
 // register
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 

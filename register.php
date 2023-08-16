@@ -159,9 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </form>
     </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> -->
     <script src="./assets/js/mdb.min.js"></script>
-    <!-- <?php include('./component/alert.php');?> -->
 </body>
 
 </html>
