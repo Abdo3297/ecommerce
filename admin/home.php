@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!(isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {
-    header('Location:http://localhost/tst/login.php');
+    header('Location:http://localhost/ecommerce/login.php');
     die;
 }
 
@@ -23,9 +23,13 @@ if (!(isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {
     <?php include('../component/welcome.php') ?>
     <?php include('../component/addproduct.php') ?>
     <?php include('../component/table.php') ?>
+    <?php include('../component/footer.php') ?>
 
-    <script src="../assets/js/mdb.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="../assets/js/mdb.min.js"></script>
+    <script src="../assets/js/script.js"></script>
     <?php include('../component/alert.php');?>
 </body>
 
