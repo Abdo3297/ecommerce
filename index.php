@@ -1,3 +1,3 @@
 <?php
-    header('location:http://localhost/tst/login.php');
+    header('location:login.php');
     die;

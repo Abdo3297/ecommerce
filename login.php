@@ -26,10 +26,10 @@
             session_start();
             $_SESSION["user"]= $response;
             if($response["role"] == 'user'){
-                header('Location:http://localhost/tst/user/home.php');
+                header('Location:/user/home.php');
                 die;
             }else{
-                header('Location:http://localhost/tst/admin/home.php');
+                header('Location:/admin/home.php');
                 die;
             }
         }

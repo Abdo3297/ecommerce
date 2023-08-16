@@ -67,11 +67,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
     // Check file size
-    if ($_FILES["image"]["size"] > 500000) {
+    if ($_FILES["image"]["size"] > 900000) {
         $errors['imgErr'] = "Sorry, your file is too large.";
     }
     // Allow certain file formats
-    if ($imageFileType != "png") {
+    if ($imageFileType != "png" && $imageFileType != "jpg") {
         $errors['imgErr'] = "Sorry, only PNG files are allowed.";
     }
     ######################################################
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $addUser->bindParam("image", $_FILES["image"]["name"]);
             if ($repassword == $password) {
                 if ($addUser->execute()) {
-                    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+                    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file); 
                     header('location:login.php');
                     die;
                 }

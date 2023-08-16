@@ -4,6 +4,7 @@ if (!(isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {
     header('Location:http://localhost/tst/login.php');
     die;
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +25,8 @@ if (!(isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin')) {
     <?php include('../component/table.php') ?>
 
     <script src="../assets/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> 
+    <?php include('../component/alert.php');?>
 </body>
 
 </html>
