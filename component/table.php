@@ -40,6 +40,9 @@ if ($statement->rowCount() == 0) {
                                 <button data-id="<?= $p['id']; ?>" data-name="<?= $p['name']; ?>" data-number="<?= $p['price']; ?>" data-image="<?= $p['image']; ?>" data-mdb-toggle="modal" data-mdb-target="#exampleModal2" type="button" class="btn btn-warning btn-sm btn-rounded my-2">
                                     Edit
                                 </button>
+                                <!-- <a href="edit.php?edit=<?= $p['id']; ?>" class="btn btn-warning btn-sm btn-rounded my-2">
+                                    Edit
+                                </a> -->
                                 <button value="<?= $p['id']; ?>" name="delete" type="submit" class="btn btn-danger btn-sm btn-rounded my-2">
                                     Delete
                                 </button>
@@ -75,7 +78,7 @@ if ($statement->rowCount() == 0) {
                     <?= $errors['nameErr'] ?? ''; ?>
                     <!-- Price input -->
                     <div class="form-outline mb-4">
-                        <input  name="price" type="number" id="number" class="form-control" min="1" max="<?= PHP_INT_MAX ?>" />
+                        <input name="price" type="number" id="number" class="form-control" min="1" max="<?= PHP_INT_MAX ?>" />
                         <label class="form-label" for="number">Price</label>
                     </div>
 
