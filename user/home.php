@@ -1,3 +1,11 @@
+<?php
+require_once('../component/connection.php');
+session_start();
+if (!(isset($_SESSION['user']) && $_SESSION['user']['role'] == 'user')) {
+    header('Location:http://localhost/ecommerce/login.php');
+    die;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +18,15 @@
 </head>
 
 <body>
-
+    <!-- navbar -->
+    <?php include('../component/usernavbar.php'); ?>
+    <h2 class="p-3 m-3 text-center">All Products</h2>
+    <?php include('../component/viewproducts.php'); ?>
+    <?php include('../component/footer.php'); ?>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="../assets/js/mdb.min.js"></script>
+    <?php include('../component/alert.php'); ?>
 </body>
 
 </html>
