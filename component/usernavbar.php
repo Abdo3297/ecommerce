@@ -35,12 +35,11 @@
                 <!-- Right elements -->
                 <div class="d-flex align-items-center">
                     <!-- Notifications -->
-                    <div class="dropdown">
-                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    
+                        <a class="text-reset me-3" href="http://localhost/ecommerce/user/shoppingCart.php" id="navbarDropdownMenuLink">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="badge rounded-pill badge-notification bg-danger"><?= $total_cart_items; ?></span>
                         </a>
-                    </div>
                     <!-- Avatar -->
                     <div class="dropdown">
                         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">

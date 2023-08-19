@@ -45,7 +45,7 @@ if ($statement->rowCount() == 0) {
     } else {
         foreach ($statement as $p) {
     ?>
-            <form action="" method="post">
+            <form method="post">
                 <div class="card my-3 p-3">
                     <img style="width: 150px;height: 150px;" src="../uploaded_files/<?= $p['image'] ?>" class="card-img-top" alt="Fissure in Sandstone" />
                     <div class="card-body">
