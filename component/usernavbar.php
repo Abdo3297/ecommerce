@@ -50,7 +50,7 @@
                                 <a class="dropdown-item" href="#">My profile</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Logout</a>
+                            <form method="post" action="../component/logout.php"><button type="submit" class="dropdown-item">Logout</button></form>
                             </li>
                         </ul>
                     </div>
