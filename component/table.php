@@ -39,7 +39,7 @@ if ($statement->rowCount() == 0) {
                                 <a href="http://localhost/ecommerce/admin/edit.php?edit=<?= $p['id']; ?>" class="btn btn-warning btn-sm btn-rounded my-2">
                                     Edit
                                 </a>
-                                <button value="<?= $p['id']; ?>" name="delete" type="submit" class="btn btn-danger btn-sm btn-rounded my-2">
+                                <button onclick="return confirm('Are You Sure?');" value="<?= $p['id']; ?>" name="delete" type="submit" class="btn btn-danger btn-sm btn-rounded my-2">
                                     Delete
                                 </button>
                             </td>

@@ -32,6 +32,8 @@
                 header('Location:http://localhost/ecommerce/admin/home.php');
                 die;
             }
+        } else {
+            $errors['login'] = "Invalid Email Or Password";
         }
     }
 ?>
@@ -49,15 +51,16 @@
 <body>
     <div class="center">
         <form method="post">
+            <?= $errors['login']??''?>
             <!-- Email input -->
             <div class="form-outline mb-4">
-                <input name="email" type="email" id="form2Example1" class="form-control" />
+                <input value="<?= $email??'' ?>" name="email" type="email" id="form2Example1" class="form-control" />
                 <label class="form-label" for="form2Example1">Email address</label>
             </div>
             <?= $errors['emailErr']??''?>
             <!-- Password input -->
             <div class="form-outline mb-4">
-                <input name="password" type="password" id="form2Example2" class="form-control" />
+                <input value="<?= $pass??'' ?>" name="password" type="password" id="form2Example2" class="form-control" />
                 <label class="form-label" for="form2Example2">Password</label>
             </div>
             <?= $errors['passErr']??''?>

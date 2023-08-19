@@ -56,7 +56,7 @@ if ($statement->rowCount() == 0) {
                         </div>
                         <input type="hidden" name="product_id" value="<?= $p['id']; ?>">
                         <button name="add_to_cart" type="submit" class="btn btn-info mb-1 w-100">Add to Cart</button>
-                        <a href="" class="btn btn-danger d-block">Buy Now</a>
+                        <a href="checkout.php?get_id=<?= $p['id']; ?>" class="btn btn-danger d-block">Buy Now</a>
                     </div>
                 </div>
             </form>
