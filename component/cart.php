@@ -59,11 +59,11 @@ if ($selectCart->rowCount() > 0) {
                                 <p class="card-text">$<?= $sc['price']; ?></p>
                                 <div>
                                     <input name="qty" type="number" min="1" value="<?= $sc['qty']; ?>" max="10" maxlength="2" class="w-50">
-                                    <button type="submit" name="update_cart" class="fas fa-edit btn btn-outline-info"></button>
+                                    <button type="submit" name="update_cart" class="fas fa-edit btn btn-outline-info mt-1"></button>
                                 </div>
                             </div>
                             <p class="sub-total">sub total : <span><i class="fas fa-indian-rupee-sign"></i><?= $sub_total = ($sc['qty'] * $sc['price']); ?></span></p>
-                            <input type="submit" value="delete" name="delete_item" class="btn btn-danger" onclick="return confirm('delete this item?');">
+                            <input type="submit" value="delete" name="delete_item" class="btn btn-danger btn-block" onclick="return confirm('delete this item?');">
                         </div>
                     </div>
                 </form>
@@ -82,8 +82,8 @@ if ($selectCart->rowCount() > 0) {
     <div class="container alert alert-warning" role="alert">
         <p>grand total : <span><i class="fas fa-indian-rupee-sign"></i> <?= $grand_total; ?></span></p>
             <form method="POST">
-                    <input type="submit" value="empty cart" name="empty_cart" class="btn btn-danger my-2" onclick="return confirm('empty your cart?');">
+                    <input type="submit" value="empty cart" name="empty_cart" class="btn btn-danger btn-block my-2" onclick="return confirm('empty your cart?');">
             </form>
-            <a href="http://localhost/ecommerce/user/checkout.php" class="btn btn-info">proceed to checkout</a>
+            <a href="http://localhost/ecommerce/user/checkout.php" class="btn btn-info btn-block">proceed to checkout</a>
     </div>
 <?php } ?>

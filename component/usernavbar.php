@@ -25,7 +25,7 @@
                             <a class="nav-link" href="http://localhost/ecommerce/user/home.php">View Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Orders</a>
+                            <a class="nav-link" href="http://localhost/ecommerce/user/orders.php">My Orders</a>
                         </li>
                     </ul>
                     <!-- Left links -->
